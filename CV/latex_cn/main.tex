@@ -1,0 +1,160 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[UTF8,scheme=plain,fontset=fandol]{ctex}
+\usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+\else
+  \usepackage{fontspec}
+  \setmainfont{texgyretermes-regular.otf}[BoldFont=texgyretermes-bold.otf,ItalicFont=texgyretermes-italic.otf,BoldItalicFont=texgyretermes-bolditalic.otf]
+\fi
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage[a4paper,top=15mm,bottom=15mm,left=18mm,right=18mm]{geometry}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifPDFTeX\pdfgentounicode=1\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={},topsep=2pt,itemsep=2pt,parsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Chinese adaptation: portable Fandol fonts included in TeX Live.
+\renewcommand{\baselinestretch}{1.04}
+\titleformat{\section}{\vspace{-2pt}\bfseries\large}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]
+
+% Compile with XeLaTeX. Edit the content below to update your information.
+
+% Research entries: full titles, publication status, and two labeled paragraphs.
+\newcommand{\researchEntry}[4]{%
+  \par\addvspace{10pt}\noindent
+  {\normalsize\bfseries #1\par}\nopagebreak
+  {\footnotesize\itshape #2\par}\nopagebreak\vspace{2pt}
+  {\small\noindent\textbf{研究内容：}#3\par}\nopagebreak\vspace{2pt}
+  {\small\noindent\textbf{个人贡献：}#4\par}
+}
+\begin{document}
+\begin{center}
+\textbf{\Huge 晏景豪} \\[3pt]
+\small 中国科学技术大学 · 博士研究生 \\[2pt]
+\small 具身智能   |   灵巧手精细操作   |   多模态感知融合 \\[2pt]
+\small 邮箱：\href{mailto:jinghaoyan943@gmail.com}{jinghaoyan943@gmail.com} \\[2pt]
+\end{center}
+
+\section{教育背景}
+\resumeSubHeadingListStart
+\resumeSubheading{中国科学技术大学}{2026.09 -- 至今}{自动化系 · 电子信息专业 · 博士研究生}{}
+\resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading{同济大学}{2022.09 -- 2026.06}{计算机科学与技术专业 · 本科}{}
+\item\small 平均绩点：4.97/5.00   |   专业排名：1/118（前 0.85\%）
+\resumeSubHeadingListEnd
+
+\section{科研与实习经历}
+\noindent\textbf{上海人工智能实验室}\hfill 2025.10 -- 至今\par
+{\small 科研实习生\par}
+\researchEntry{MegaParts: Scaling Part-Aware 3D Object Generation to 300 Parts via Token-Efficient Autoregressive Modeling}{SIGGRAPH Asia 2026 已接收}{面向复杂多部件物体生成，结合自适应长度的离散几何编码与统一自回归序列建模，联合生成物体及部件包围盒与部件几何。通过压缩几何 token 降低长序列开销，将生成规模扩展至 300 个部件，同时保留精细结构与部件级控制能力。}{负责基线方法的实验运行、结果统计与对比分析，为生成质量与方法有效性评估提供实验支持；熟悉项目整体框架、部件表示方式及实验设计。}
+\researchEntry{Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis}{预印本}{面向俯视图到三维室内场景的生成，利用多模态大模型解析场景元素与空间关系，以 Blender 代码表示几何、材质和光照。通过分阶段执行与跨阶段记忆，缓解 Agent 在完整场景生成中的上下文遗忘、执行不稳定与循环问题。}{负责三维生成模型在 Agent 系统中的集成，使 Agent 能够调用生成模型制作难以直接通过代码构建的物体，补充代码建模能力并扩展可生成物体的范围。}
+\researchEntry{From Parts to Sim: Bottom-Up Autoregressive Generation of Sim-Ready 3D Assets}{在审}{面向可交互、可仿真的三维资产生成，以自底向上的自回归框架关联精细几何部件与刚体运动学结构，联合建模几何、关节及物理属性。生成资产支持 USD/URDF 导出，并用于仿真交互轨迹采集与机器人策略的仿真到现实迁移。}{负责基线实验运行、结果统计与分析，以及材质生成管线搭建：结合部件 UV 图集、物体级材质生成与部件材质重映射，在保留关节结构的同时维持跨部件外观一致性。}
+
+\section{荣誉奖励}
+\resumeSubHeadingListStart
+\item\small 国家奖学金（Top 3\%）\hfill 2022--2023
+\item\small 国家奖学金（Top 3\%）\hfill 2023--2024
+\item\small 国家奖学金（Top 3\%）\hfill 2024--2025
+\item\small 上海市优秀毕业生（Top 2\%）\hfill 2026
+\resumeSubHeadingListEnd
+
+\section{专业技能}
+\begin{itemize}[leftmargin=0.15in,label={},itemsep=1pt]
+\item\small\textbf{编程与框架：} Python、PyTorch
+\item\small\textbf{深度学习：} 熟悉模型部署与实验评估
+\item\small\textbf{三维工具：} 具备 Blender 与三维资产处理经验
+\end{itemize}
+\end{document}

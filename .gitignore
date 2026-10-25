@@ -1,3 +1,19 @@
 _site/
+.sass-cache/
 push.sh
 .DS_Store
+
+# Keep local credentials and CV build artifacts out of the public repository.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+CV/**/*.log
+CV/**/*.aux
+CV/**/*.out
+CV/**/*.fls
+CV/**/*.fdb_latexmk
+CV/**/preview-*.png
+CV/**/original_template.tex
+images/wechat.jpg

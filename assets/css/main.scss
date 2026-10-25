@@ -107,3 +107,43 @@ h1:before, .anchor:before {
     background-color: #00369f;
     font-size: .8em;
 }
+
+.author__name-zh {
+    margin: .5em 0;
+}
+
+.author__urls .author__employer {
+    white-space: normal;
+}
+
+// Frame the original photo around the face and shoulders, without changing it.
+// The displayed square is the 820px crop starting at (300, 170) in the 1282x1280 photo.
+.author__avatar-frame {
+    display: block;
+    position: relative;
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @include breakpoint($large) {
+        width: 175px;
+        height: 175px;
+        border: 1px solid $border-color;
+    }
+
+    img.author__avatar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 156.341463%;
+        height: auto;
+        min-width: 0;
+        max-width: none;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        transform: translate(-23.400936%, -13.28125%);
+    }
+}

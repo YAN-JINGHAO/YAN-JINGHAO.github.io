@@ -6,9 +6,12 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Lorem ipsum"
-description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
-repository               : "RayeRen/acad-homepage.github.io"
+title                    : "Jinghao Yan (晏景豪)"
+description              : "Embodied intelligence, with a focus on world modeling and dexterous manipulation."
+url                      : "https://yan-jinghao.github.io"
+baseurl                  : ""
+repository               : "YAN-JINGHAO/YAN-JINGHAO.github.io"
+google_scholar_stats_enabled : false # Enable after configuring your Google Scholar profile and crawler.
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -21,14 +24,15 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Lorem ipsum"
-  avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
-  location         : "Beijing, China"
-  employer         :
+  name             : "Jinghao Yan"
+  name_zh          : "晏景豪"
+  avatar           : "/images/profile.jpg"
+  bio              : "Ph.D. Student, USTC"
+  location         : "Shanghai, China"
+  employer         : "Shanghai AI Laboratory"
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "Lorem@ipsum.com"
+  googlescholar    :
+  email            : "jinghaoyan943@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -37,7 +41,8 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : # e.g., "github username"
+  github           : "YAN-JINGHAO"
+  wechat           : # Keep personal contact QR codes private by default.
   google_plus      :
   keybase          :
   instagram        :
@@ -65,6 +70,22 @@ include:
   - _pages
   - files
 exclude:
+  # Publish the CV PDFs, without their editable sources or build artifacts.
+  - "CV/**/*.tex"
+  - "CV/**/*.log"
+  - "CV/**/*.aux"
+  - "CV/**/*.out"
+  - "CV/**/*.fls"
+  - "CV/**/*.fdb_latexmk"
+  - "CV/**/preview-*.png"
+  - "CV/**/README.txt"
+  - "CV/**/LICENSE"
+  - ".env"
+  - ".env.*"
+  - "**/*.pem"
+  - "**/*.key"
+  - images/wechat.jpg
+  - run_server.sh
   - docs
   - google_scholar_crawler
   - "*.sublime-project"

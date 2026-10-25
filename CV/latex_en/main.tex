@@ -1,0 +1,156 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+\else
+  \usepackage{fontspec}
+  \setmainfont{texgyretermes-regular.otf}[BoldFont=texgyretermes-bold.otf,ItalicFont=texgyretermes-italic.otf,BoldItalicFont=texgyretermes-bolditalic.otf]
+\fi
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\usepackage[a4paper,top=15mm,bottom=15mm,left=18mm,right=18mm]{geometry}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifPDFTeX\pdfgentounicode=1\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={},topsep=2pt,itemsep=2pt,parsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Compile with XeLaTeX. Edit the content below to update your information.
+
+% Research entries: full titles, publication status, and two labeled paragraphs.
+\newcommand{\researchEntry}[4]{%
+  \par\addvspace{10pt}\noindent
+  {\normalsize\bfseries #1\par}\nopagebreak
+  {\footnotesize\itshape #2\par}\nopagebreak\vspace{2pt}
+  {\small\noindent\textbf{Research: }#3\par}\nopagebreak\vspace{2pt}
+  {\small\noindent\textbf{Contribution: }#4\par}
+}
+\begin{document}
+\begin{center}
+\textbf{\Huge Jinghao Yan} \\[3pt]
+\small PhD Student · University of Science and Technology of China \\[2pt]
+\small Embodied Intelligence | Dexterous Manipulation | Multimodal Perception Fusion \\[2pt]
+\small Email: \href{mailto:jinghaoyan943@gmail.com}{jinghaoyan943@gmail.com} \\[2pt]
+\end{center}
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{University of Science and Technology of China}{Sep 2026 -- Present}{PhD Student in Electronic Information, Department of Automation}{}
+\resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading{Tongji University}{Sep 2022 -- Jun 2026}{Bachelor’s Degree in Computer Science and Technology}{}
+\item\small GPA: 4.97/5.00   |   Rank: 1/118 (top 0.85\%)
+\resumeSubHeadingListEnd
+
+\section{Research Experience}
+\noindent\textbf{Shanghai AI Lab}\hfill Oct 2025 -- Present\par
+{\small Research Intern\par}
+\researchEntry{MegaParts: Scaling Part-Aware 3D Object Generation to 300 Parts via Token-Efficient Autoregressive Modeling}{SIGGRAPH Asia 2026 · Accepted}{Scales part-aware 3D generation to 300 parts using adaptive-length discrete geometry tokens and a unified autoregressive sequence for object bounds, part bounds and geometry. Compact representations reduce long-context costs while preserving fine structures and part-level control.}{Ran baseline experiments, compiled results and analyzed comparisons to support quality and effectiveness evaluation; gained a solid understanding of the overall framework, part representations and experimental design.}
+\researchEntry{Code-as-Room: Generating 3D Rooms from Top-Down View Images via Agentic Code Synthesis}{Preprint}{Generates 3D rooms from top-down images by parsing scene elements and spatial relations, then synthesizing Blender code for geometry, materials and lighting. A staged execution framework and cross-stage memory address context forgetting, unstable execution and agent loops.}{Integrated a 3D generation model into the agent system to create objects difficult to construct directly through code, complementing procedural modeling and broadening the range of objects the system can generate.}
+\researchEntry{From Parts to Sim: Bottom-Up Autoregressive Generation of Sim-Ready 3D Assets}{Under review}{Generates simulation-ready assets through bottom-up autoregressive modeling of fine-grained components, rigid links, joints and physical properties. Assets support USD/URDF export and provide simulated interaction trajectories for robot policies that transfer to real objects.}{Ran and analyzed baseline experiments; built the material pipeline using part UV atlases, object-level material generation and per-part remapping to maintain consistent appearance while preserving articulation.}
+
+\section{Honors and Awards}
+\resumeSubHeadingListStart
+\item\small National Scholarship (Top 3\%)\hfill 2022--23
+\item\small National Scholarship (Top 3\%)\hfill 2023--24
+\item\small National Scholarship (Top 3\%)\hfill 2024--25
+\item\small Shanghai Outstanding Graduate (Top 2\%)\hfill 2026
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in,label={},itemsep=1pt]
+\item\small\textbf{Programming \& frameworks:}  Python, PyTorch
+\item\small\textbf{Deep learning:}  Model deployment and experimental evaluation
+\item\small\textbf{3D tools:}  Experience with Blender and 3D asset processing
+\end{itemize}
+\end{document}
